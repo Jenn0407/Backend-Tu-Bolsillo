@@ -10,7 +10,7 @@ import java.util.Date;
 
 @Component
 public class JWTUtil {
-    private static final String SECURITY_KEY = "n8$!e@4yM%G7pLsC&QzXvF#B2*J^R5+8a3d";
+    private static final String SECURITY_KEY = System.getenv().get("JWT_SECRET");
     private static final long EXPIRATION_TIME = 3600000;
 
     public String generarToken(Usuario usuario) {

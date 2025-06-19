@@ -34,11 +34,6 @@ public class Gasto {
     public Gasto() {
     }
 
-    @PrePersist
-    protected void prePersist() {
-        this.fecha = LocalDateTime.now();
-    }
-
     public Long getId() {
         return id;
     }
